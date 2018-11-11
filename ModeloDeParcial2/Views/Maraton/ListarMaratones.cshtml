@@ -1,0 +1,27 @@
+﻿@using ModeloDeParcial2.Models
+@model List<Maraton> 
+
+@{
+    ViewBag.Title = "ListarMaratones";
+}
+
+<h2>Listar Maratones</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <td>Maraton</td>
+        <td>Cantidad Integrantes</td>
+        <td>Eitar</td>
+        <td>Eliminar</td>
+    </tr>
+    @foreach(Maraton maraton in Model)
+    {
+    <tr>
+        <td>@maraton.nombre</td>
+        <td>@maraton.Cantidad_Participante</td>
+        <td><a href="/Maraton/Editar/@maraton.id" class="btn btn-warning">Editar</a></td>
+        <td><a href="/Maraton/Eliminar/@maraton.id" class="btn btn-danger">Eliminar</a></td>
+    </tr>
+    }
+
+</table>

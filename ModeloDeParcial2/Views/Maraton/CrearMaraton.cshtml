@@ -1,0 +1,24 @@
+﻿@model ModeloDeParcial2.Models.Maraton
+
+@{
+    ViewBag.Title = "CrearMaraton";
+}
+
+<h2>Crear Maraton</h2>
+
+<div class="form-inline">
+    @using (Html.BeginForm())
+    {
+        <div class="form-control">
+            <label>Nombre Maraton</label>
+            @Html.TextBoxFor(x=>x.nombre)
+        </div>
+        
+        <div class="form-control">
+            <label>Numero de Participantes</label>
+            @Html.TextBoxFor(x=>x.Cantidad_Participante)
+        </div>
+
+        <input type="submit" value="Agregar Maraton" class="btn btn-success"/>
+    }
+</div>
